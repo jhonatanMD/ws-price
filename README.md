@@ -35,8 +35,13 @@ git clone https://github.com/jhonatanMD/ws-price.git
 cd ws-price
 ```
 
+### 2. Build project
 
-### 2. Start the environment with Docker
+```bash
+mvn clean install
+  ```
+
+### 3. Start the environment with Docker
 
 ```bash
 docker-compose build --no-cache  
@@ -46,7 +51,7 @@ docker-compose build --no-cache
  ```bash
   docker-compose up -d influxdb grafana ws-price
    ```
-### 3. Test the service at [http://localhost:8080](http://localhost:8080)
+### 4. Test the service at [http://localhost:8080](http://localhost:8080)
 
 Make a GET request to:
 ```http
