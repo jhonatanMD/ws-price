@@ -51,7 +51,6 @@ services:
       - "8080:8080"
     container_name: ws-price-container
     environment:
-      SPRING_PROFILES_ACTIVE: dev
       SONAR_LOGIN: admin
       SONAR_PASSWORD: admin
     volumes:

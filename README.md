@@ -157,6 +157,17 @@ The `docker-compose.yml` file defines and configures the services necessary for 
 
 - **Prometheus**: Access Prometheus at [http://localhost:9090](http://localhost:9090) to monitor the service metrics.
 
+
+## Prometheus:
+
+- Prometheus Metrics Endpoint:
+  [http://localhost:9090/metrics](http://localhost:9090/metrics)
+
+- WS-PRICE-APP Metrics Endpoint:
+[http://localhost:8080/actuator/prometheus](http://localhost:8080/actuator/prometheus)
+
+![img.png](img/prometheus.png)
+
 ## API Endpoints
 
 ### Get Preferred Price
