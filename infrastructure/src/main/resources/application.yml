@@ -12,5 +12,25 @@ spring:
     console:
       enabled: true
       path: /h2-console
+
+springdoc:
+  api-docs:
+    version: OPENAPI_3_0
+
+
 server:
   port: 8080
+  address: 0.0.0.0
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
+
+  endpoint:
+    prometheus:
+      access: read_only

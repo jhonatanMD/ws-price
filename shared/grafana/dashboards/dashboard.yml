@@ -9,4 +9,13 @@ providers:
   disableDeletion: false
   editable: true
   options:
-    path: /etc/grafana/provisioning/dashboards
+    path: /etc/grafana/provisioning/dashboards/performance-test-dasboard.json
+
+- name: 'prometheus'
+  orgId: 1
+  folder: 'Prometheus'
+  type: file
+  disableDeletion: false
+  editable: true
+  options:
+    path: /etc/grafana/provisioning/dashboards/ws-price-app-dasboard.json

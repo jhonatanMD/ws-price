@@ -73,9 +73,11 @@ components:
           type: integer
           format: int32
         startDate:
-          type: OffsetDateTime
+          type: string
+          format: date-time
         endDate:
-          type: OffsetDateTime
+          type: string
+          format: date-time
         price:
           type: number
           format: double

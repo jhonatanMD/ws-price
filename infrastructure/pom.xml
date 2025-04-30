@@ -7,6 +7,10 @@
         <groupId>com.ws</groupId>
         <version>1.0.0</version>
     </parent>
+    <properties>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    </properties>
+
 
     <artifactId>infrastructure</artifactId>
     <packaging>jar</packaging>
@@ -56,7 +60,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.1.0</version>
+            <version>2.8.5</version>
         </dependency>
     </dependencies>
 
@@ -127,20 +131,18 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.10</version>
                 <executions>
-                    <!-- Preparar el agente de JaCoCo -->
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
-                            <goal>prepare-agent</goal> <!-- Esto prepara el agente de JaCoCo para que se ejecute durante los tests -->
+                            <goal>prepare-agent</goal>
                         </goals>
                     </execution>
 
-                    <!-- Generar reporte de cobertura -->
                     <execution>
                         <id>report</id>
-                        <phase>verify</phase> <!-- Después de la fase de test -->
+                        <phase>verify</phase>
                         <goals>
-                            <goal>report</goal> <!-- Genera el reporte de cobertura -->
+                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
